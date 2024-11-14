@@ -21,7 +21,7 @@ export default function IntroduceBox() {
           </Card>
         </div>
       </Link>
-      <Link href={"/member"}>
+      <Link href={"/concert"}>
         <div className="relative w-auto h-32 mobile-size:h-20 overflow-hidden rounded-lg">
           <div
             className="absolute inset-0 bg-cover bg-center bg-opacity-5 z-0"
@@ -38,7 +38,7 @@ export default function IntroduceBox() {
           </Card>
         </div>
       </Link>
-      <Link href={"/contact"}>
+      <Link href={"/sponser"}>
         <div className="relative w-auto h-32 mobile-size:h-20 overflow-hidden rounded-lg">
           <div
             className="absolute inset-0 bg-cover bg-center bg-opacity-5 z-0"
