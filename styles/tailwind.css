@@ -1,0 +1,6 @@
+.desktop-visible {
+  @apply mobile-size:hidden;
+}
+.mobile-visible {
+  @apply desktop-size:hidden;
+}
