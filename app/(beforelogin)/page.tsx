@@ -2,6 +2,7 @@ import dynamic from "next/dynamic";
 import { Separator } from "@/components/ui/separator";
 import { Libre_Baskerville } from "next/font/google";
 import Image from "next/image";
+import ConcertBox from "./_component/ConcertBox";
 const IntroduceBox = dynamic(() => import("./_component/IntroduceBox"));
 
 const font = Libre_Baskerville({ subsets: ["latin"], weight: ["400"] });
@@ -39,6 +40,9 @@ export default function Page() {
         >
           {/* INTRODUCE */}
           <IntroduceBox />
+          <Separator />
+          {/* INTRODUCE */}
+          <ConcertBox />
           <Separator />
           {/* NEWS */}
           <div className="grid grid-cols-1 desktop-size:grid-cols-2"></div>

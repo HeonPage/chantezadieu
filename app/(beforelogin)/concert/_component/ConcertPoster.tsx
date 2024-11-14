@@ -25,8 +25,6 @@ const ConcertPoster = ({ concert }: { concert: IConcert }) => {
                   (max-width: 1280px) 50vw,
                   (max-width: 1536px) 33vw,
                   25vw"
-            placeholder="blur"
-            blurDataURL={concert.blurData_url}
           />
         </div>
       </DialogTrigger>
