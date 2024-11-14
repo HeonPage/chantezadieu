@@ -1,6 +1,5 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {  compiler: {
+/** @type {import('next').NextConfig} */
+const nextConfig = {  compiler: {
     styledComponents: true,
   },
   reactStrictMode: false,
@@ -32,4 +31,4 @@ const nextConfig: NextConfig = {  compiler: {
   },
 };
 
-export default nextConfig;
+module.exports = nextConfig;
