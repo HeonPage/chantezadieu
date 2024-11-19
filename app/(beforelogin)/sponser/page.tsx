@@ -10,7 +10,7 @@ export default function page() {
         description="Chantez a dieu"
         link_url="/sponser"
       />
-      <div className="">
+      <div className="text-sm">
         <div className="bg-white border rounded-lg p-6 mb-8">
           <p className="text-slate-700 leading-relaxed mb-4">
             하나님의 신실하심과 아름다우심을 온 세상에 전하는 사역에 지금
