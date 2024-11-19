@@ -49,7 +49,7 @@ export const Poster = ({ concert }: Props) => {
       </div>
       {/* Mobile */}
       <div key={concert.title} className="mobile-visible tablet-size:hidden">
-        <Link href={`/concert/${concert.age}/${concert.type}/${concert.no}`}>
+        <Link href={`/concert/${concert.id}`}>
           <div className="flex flex-col gap-2">
             <div className="relative w-full h-48 border-gray-600 mobile-size:rounded-lg">
               <Image
