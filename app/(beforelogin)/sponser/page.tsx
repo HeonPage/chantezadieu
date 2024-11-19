@@ -83,7 +83,60 @@ export default function page() {
 
           <h3 className="text-2xl font-semibold mb-4">후원자 예우안내</h3>
           <div className="overflow-x-auto">
-            <table className="w-full text-sm text-left text-gray-500">
+            <div className="block lg:hidden">
+              {/* 모바일 뷰 */}
+              {[
+                {
+                  member: "스벨링크 회원",
+                  amount: "월 2만원",
+                  benefit: "정기연주회 A석 2매",
+                },
+                {
+                  member: "바 흐 회원",
+                  amount: "월 3만원",
+                  benefit: "정기연주회 S석 2매",
+                },
+                {
+                  member: "모차르트 회원",
+                  amount: "월 5만원",
+                  benefit: "정기연주회 S석 4매",
+                },
+                {
+                  member: "브 람 스 회원",
+                  amount: "월 10만원 이상",
+                  benefit: "정기연주회 R석 4매",
+                },
+              ].map((row, index) => (
+                <div
+                  key={index}
+                  className="bg-white rounded-lg shadow-sm mb-4 p-4"
+                >
+                  <div className="font-medium text-gray-900 mb-2">
+                    {row.member}
+                  </div>
+                  <div className="text-gray-600 text-sm mb-1">{row.amount}</div>
+                  <div className="text-gray-600 text-sm">{row.benefit}</div>
+                  {index === 0 && (
+                    <div className="mt-3 pt-3 border-t border-gray-200">
+                      <ul className="list-disc pl-5 text-sm text-gray-600">
+                        <li>프로그램북 2부 제공</li>
+                        <li>프로그램북 회원명단 게재</li>
+                        <li>티켓구매시 30% 할인</li>
+                      </ul>
+                    </div>
+                  )}
+                </div>
+              ))}
+              <div className="bg-white rounded-lg shadow-sm p-4">
+                <div className="font-medium text-gray-900 mb-2">광고 후원</div>
+                <div className="text-gray-600 text-sm">
+                  프로그램북에 광고를 게재하여 후원하실 분
+                </div>
+              </div>
+            </div>
+
+            {/* 데스크톱 뷰 */}
+            <table className="w-full text-sm text-left text-gray-500 hidden lg:table">
               <tbody>
                 {[
                   {
