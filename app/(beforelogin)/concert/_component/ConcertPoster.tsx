@@ -34,10 +34,7 @@ const ConcertPoster = ({ concert }: { concert: IConcert }) => {
       >
         <DialogHeader>
           <DialogTitle>
-            <span className="text-2xl font-bold">
-              제{concert.no}회 {concert.age == "OB" && "O.B. "}
-              {concert.type == "ann" ? "정기연주회" : "5월의 노래축제"}
-            </span>
+            <span className="text-2xl font-bold">{concert.title}</span>
           </DialogTitle>
           <DialogDescription>
             <span className="text-md">
@@ -51,8 +48,6 @@ const ConcertPoster = ({ concert }: { concert: IConcert }) => {
             src={concert.img_url}
             width={500}
             height={500}
-            placeholder="blur"
-            blurDataURL={concert.blurData_url}
           />
         </div>
       </DialogContent>
