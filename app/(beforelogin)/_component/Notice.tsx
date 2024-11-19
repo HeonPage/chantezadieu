@@ -15,7 +15,6 @@ export function NoticeBox() {
           >
             News & Events
           </CardTitle>
-          {/* <CardDescription>글리클럽의 새로운 소식을 알려드려요</CardDescription> */}
         </CardHeader>
         <CardContent className="mobile-size:px-0 tablet-size:px-0 grid gap-2">
           {Array.from({ length: 4 }).map((_, index) => (

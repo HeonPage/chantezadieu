@@ -70,10 +70,7 @@ const error = () => {
                   <div className=" flex items-center space-x-4 rounded-md border">
                     <div className="flex-1 space-y-1 p-4">
                       <p className="text font-bold leading-none">
-                        연세남성합창단
-                      </p>
-                      <p className="text-sm text-muted-foreground">
-                        Yonsei Glee Glub
+                        샹떼 자 듀 합창단
                       </p>
                     </div>
                   </div>
