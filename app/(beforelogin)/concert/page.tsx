@@ -31,7 +31,7 @@ export default function page() {
 
   const renderSection = (title: string, list: IConcert[]) => (
     <div className="part-section">
-      <Breadcrumb title={title} description="" link_url="#" />
+      <Breadcrumb title={title + "년"} description="" link_url="#" />
       <div className="grid grid-cols-5 tablet-size:grid-cols-4 mobile-size:grid-cols-2 gap-6 justify-center">
         {list.map((concert: IConcert, index: number) => (
           <div key={concert.title + index}>
@@ -58,7 +58,6 @@ export default function page() {
           title={"연주회"}
           description="Chantez a dieu"
           link_url="/concert"
-          className="desktop-visible"
         />
         <div className="space-y-12">{renderConcertSections()}</div>
       </div>

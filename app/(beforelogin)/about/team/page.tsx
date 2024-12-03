@@ -9,7 +9,7 @@ export default async function page() {
       <div>
         <div className="flex flex-col gap-6 ">
           <Breadcrumb
-            title={"Our Team"}
+            title={"조직도"}
             description="Chantez a dieu"
             link_url="/about/team"
           />

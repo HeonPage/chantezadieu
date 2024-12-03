@@ -10,16 +10,16 @@ export default function page() {
     <>
       <div className="flex flex-col gap-6">
         <Breadcrumb
-          title={"샹떼자듀"}
+          title={"샹떼 자 듀 합창단"}
           description="Chantez a dieu"
           link_url="/about/director"
         />
         <div className="mx-auto">
           <div color="transparent" className="flex flex-col gap-6">
             <Card className="h-full bg-transparent border-0">
-              <CardHeader className="p-0 mb-3">
+              {/* <CardHeader className="p-0 mb-3">
                 <CardTitle className="text-left">샹떼 자 듀 합창단</CardTitle>
-              </CardHeader>
+              </CardHeader> */}
               <CardContent className="p-0">
                 {" "}
                 “주님을 찬양하라”는 뜻인 샹떼 자 듀(Chantez à Dieu)는
