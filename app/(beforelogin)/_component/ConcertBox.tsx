@@ -16,12 +16,12 @@ export default function ConcertBox() {
       <div className="grid mobile-size:grid-cols-1 grid-cols-3 gap-20">
         {concertList.slice(0, 3).map((concert, index) => (
           <Link href={`/concert/${concert.id}`} key={concert.id}>
-            <div className="relative w-auto h-96 overflow-hidden rounded-lg">
+            <div className="relative w-auto h-96 overflow-hidden rounded-lg border">
               <div
-                className="absolute inset-0 bg-cover bg-center bg-opacity-5 z-0"
+                className="absolute inset-0 bg-cover bg-center z-0"
                 style={{ backgroundImage: `url('/${concert.id}/01.jpg')` }}
               />
-              <div className="relative w-full h-full bg-black bg-opacity-40"></div>
+              <div className="relative w-full h-full"></div>
               <Card className="absolute inset-0 z-10 h-full bg-transparent border-0">
                 <CardHeader>
                   <CardTitle className="text-white text-right"></CardTitle>
