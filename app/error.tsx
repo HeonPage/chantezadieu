@@ -31,9 +31,9 @@ const error = () => {
         {/* Desktop */}
         <div className="w-full max-w-5xl flex justify-between items-center p-3 px-5 text-sm ">
           <div className="flex gap-5 font-semibold text-xl shrink-0">
-            <Link href={"/"}>
+            {/* <Link href={"/"}>
               <Image src={"/logo3.png"} width={200} height={50} alt={"logo"} />
-            </Link>
+            </Link> */}
           </div>
           <div className="flex gap-3 items-center">
             <DesktopNavigation />
@@ -43,7 +43,7 @@ const error = () => {
       {/* Mobile */}
       <nav className="mobile-visible tablet-size:hidden w-full flex justify-between items-center border-b border-b-foreground/10 h-16 px-2 sticky top-0 bg-white dark:bg-black z-10">
         {/* Mobile Header */}
-        <div>
+        {/* <div>
           <Link href={"/"}>
             <Image
               src={"/logo3.png"}
@@ -53,7 +53,7 @@ const error = () => {
               className="rounded-lg"
             />
           </Link>
-        </div>
+        </div> */}
         {/* Mobile Drawer */}
         <div className="flex">
           <ThemeSwitcher />
