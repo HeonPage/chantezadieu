@@ -118,7 +118,7 @@ const error = () => {
                   <SheetClose asChild>
                     <div className="flex flex-col gap-2 justify-end">
                       <p className="text-xs text-muted-foreground">
-                        Copyright {currentYear} Yonsei GleeClub
+                        Copyright {currentYear} Chantez a dieu
                       </p>
                     </div>
                   </SheetClose>

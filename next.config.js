@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {  compiler: {
+const nextConfig = {
+  compiler: {
     styledComponents: true,
   },
   reactStrictMode: false,
@@ -10,7 +11,6 @@ const nextConfig = {  compiler: {
         hostname: "glee.or.kr",
         pathname: "/files/attach/**",
       },
-      { protocol: "https", hostname: "www.yonseigleeclub.com" },
       { protocol: "https", hostname: "images.unsplash.com" },
       { protocol: "http", hostname: "www.kmc1958.or.kr" },
       { protocol: "https", hostname: "media.discordapp.net" },
