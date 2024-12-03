@@ -34,7 +34,7 @@ export default function page() {
       <Breadcrumb title={title} description="" link_url="#" />
       <div className="grid grid-cols-5 tablet-size:grid-cols-4 mobile-size:grid-cols-2 gap-6 justify-center">
         {list.map((concert: IConcert, index: number) => (
-          <div key={concert.title + index} className="border-b">
+          <div key={concert.title + index}>
             <Poster concert={concert} />
           </div>
         ))}

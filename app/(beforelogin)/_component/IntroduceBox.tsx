@@ -7,7 +7,7 @@ export default function IntroduceBox() {
       <Link href={"/about"}>
         <div className="relative w-auto h-32 mobile-size:h-20 overflow-hidden rounded-lg">
           <div
-            className="absolute inset-0 bg-cover bg-center bg-opacity-5 z-0"
+            className="absolute inset-0 bg-cover bg-top -top-9 bg-opacity-5 z-0"
             style={{ backgroundImage: `url('/in01.jpg')` }}
           />
           <div className="relative w-full h-full bg-black bg-opacity-40"></div>

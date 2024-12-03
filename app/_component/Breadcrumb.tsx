@@ -16,7 +16,9 @@ const Breadcrumb = ({ title, description, link_url, className }: Props) => {
       <Link href={link_url}>
         <div className="space-y-1 tablet-size:p-6">
           <h2 className="text-2xl font-semibold tracking-tight">{title}</h2>
-          <p className={cn("text-sm text-muted-foreground", font.className)}>
+          <p
+            className={cn("text-sm text-muted-foreground h-4", font.className)}
+          >
             {description}
           </p>
         </div>

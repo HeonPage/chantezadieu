@@ -36,14 +36,14 @@ export const Poster = ({ concert }: Props) => {
                   25vw"
               />
             </div>
-            <div className="flex flex-col pb-2">
+            {/* <div className="flex flex-col pb-2">
               <div className="flex gap-2 text-center font-semibold items-center">
                 <span className="text-sm">{concert.title}</span>
               </div>
               <div className="text-center text-xs font-semibold">
                 {concert.date}
               </div>
-            </div>
+            </div> */}
           </div>
         </Link>
       </div>
@@ -51,7 +51,7 @@ export const Poster = ({ concert }: Props) => {
       <div key={concert.title} className="mobile-visible tablet-size:hidden">
         <Link href={`/concert/${concert.id}`}>
           <div className="flex flex-col gap-2">
-            <div className="relative w-full h-48 border-gray-600 mobile-size:rounded-lg">
+            <div className="relative w-full h-72 mobile-size:h-52 border-gray-600 mobile-size:rounded-lg">
               <Image
                 src={concert.img_url}
                 width={300}
@@ -68,11 +68,11 @@ export const Poster = ({ concert }: Props) => {
                   60vw"
               />
             </div>
-            <div className="flex gap-1 justify-between items-center text-sm">
+            {/* <div className="flex gap-1 justify-between items-center text-sm">
               <div className="font-semibold text-xs text-center tracking-tighter">
                 {concert.title}
               </div>
-            </div>
+            </div> */}
           </div>
         </Link>
       </div>
