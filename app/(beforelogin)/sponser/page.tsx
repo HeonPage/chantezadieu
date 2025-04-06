@@ -216,8 +216,8 @@ export default function page() {
         <div className="bg-white shadow-md rounded-lg p-6">
           <h3 className="text-2xl font-semibold mb-4">후원금 사용내역</h3>
           <p className=" leading-relaxed mb-4">
-            사단법인 샹떼자듀합창단은 「법인세법 시행규칙 제18조의 2제1항」에
-            따라 연간 기부금 모금액 활용실적 명세서를 공개합니다.
+            사단법인 샹떼자듀합창단은 「법인세법 시행령」 제38조제8항 또는
+            제39조제5항에 따라 연간 기부금 모금액 활용실적 명세서를 공개합니다.
           </p>
           <ul className="space-y-2">
             {[2023, 2022, 2021, 2020, 2019, 2018].map((year) => (
