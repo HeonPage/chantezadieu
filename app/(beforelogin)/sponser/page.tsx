@@ -203,18 +203,25 @@ export default function page() {
             사단법인 샹떼자듀합창단은 「법인세법 시행령」 제38조제8항 또는
             제39조제5항에 따라 연간 기부금 모금액 활용실적 명세서를 공개합니다.
           </p>
-          <ul className="space-y-2">
-            {[2024, 2023, 2022, 2021, 2020, 2019, 2018].map((year) => (
-              <li key={year}>
-                <a
-                  href={`./연간기부금모금액및활용실적명세서(${year}년도).pdf`}
-                  className="text-blue-600 hover:underline"
-                >
+          <div className="flex flex-col gap-2">
+            <select
+              className="w-full p-2 border border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+              onChange={(e) => {
+                const url = `./연간기부금모금액및활용실적명세서(${e.target.value}년도).pdf`;
+                window.open(url, "_blank");
+              }}
+              defaultValue=""
+            >
+              <option value="" disabled>
+                연도를 선택하세요
+              </option>
+              {[2024, 2023, 2022, 2021, 2020, 2019, 2018].map((year) => (
+                <option key={year} value={year}>
                   {year}년 연간 기부금 모금액 및 활용실적 명세서
-                </a>
-              </li>
-            ))}
-          </ul>
+                </option>
+              ))}
+            </select>
+          </div>
         </div>
       </div>
     </div>
