@@ -31,10 +31,10 @@ const MobileDrawer = () => {
         <Link href={"/"}>
           <Image
             src={"/logo_mobile.png"}
-            width={100}
-            height={100}
+            width={200}
+            height={200}
             alt={"logo"}
-            className="rounded-lg"
+            className="rounded-lg -ml-[30px]"
           />
         </Link>
       </div>
@@ -55,16 +55,18 @@ const MobileDrawer = () => {
             <SheetTitle className="sr-only">네비게이션 메뉴</SheetTitle>
             <div className="flex flex-col justify-between h-full">
               <div className="grid grid-flow-row gap-6">
-                <div className=" flex items-center space-x-4 rounded-md border">
-                  <div className="flex-1 space-y-1 p-4">
-                    <p className="text font-bold leading-none">
-                      샹떼 자 듀 합창단
-                    </p>
-                    <p className="text-sm text-muted-foreground">
-                      Chantez a dieu
-                    </p>
+                <Link href="/" onClick={() => setOpen(false)}>
+                  <div className="flex items-center space-x-4 rounded-md border">
+                    <div className="flex-1 space-y-1 p-4">
+                      <p className="text font-bold leading-none">
+                        샹떼 자 듀 합창단
+                      </p>
+                      <p className="text-sm text-muted-foreground">
+                        Chantez a dieu
+                      </p>
+                    </div>
                   </div>
-                </div>
+                </Link>
                 <Accordion
                   type="single"
                   collapsible

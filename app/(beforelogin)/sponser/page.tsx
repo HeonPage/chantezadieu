@@ -82,107 +82,91 @@ export default function page() {
           ))}
 
           <h3 className="text-2xl font-semibold mb-4">후원자 예우안내</h3>
-          <div className="overflow-x-auto">
-            <div className="block lg:hidden">
-              {/* 모바일 뷰 */}
-              {[
-                {
-                  member: "스벨링크 회원",
-                  amount: "월 2만원",
-                  benefit: "정기연주회 A석 2매",
-                },
-                {
-                  member: "바 흐 회원",
-                  amount: "월 3만원",
-                  benefit: "정기연주회 S석 2매",
-                },
-                {
-                  member: "모차르트 회원",
-                  amount: "월 5만원",
-                  benefit: "정기연주회 S석 4매",
-                },
-                {
-                  member: "브 람 스 회원",
-                  amount: "월 10만원 이상",
-                  benefit: "정기연주회 R석 4매",
-                },
-              ].map((row, index) => (
-                <div
-                  key={index}
-                  className="bg-white rounded-lg shadow-sm mb-4 p-4"
-                >
-                  <div className="font-medium text-gray-900 mb-2">
-                    {row.member}
-                  </div>
-                  <div className="text-gray-600 text-sm mb-1">{row.amount}</div>
-                  <div className="text-gray-600 text-sm">{row.benefit}</div>
-                  {index === 0 && (
-                    <div className="mt-3 pt-3 border-t border-gray-200">
-                      <ul className="list-disc pl-5 text-sm text-gray-600">
-                        <li>프로그램북 2부 제공</li>
-                        <li>프로그램북 회원명단 게재</li>
-                        <li>티켓구매시 30% 할인</li>
-                      </ul>
-                    </div>
-                  )}
+          <div className="grid grid-cols-2 mobile-size:grid-cols-1 gap-4">
+            {[
+              {
+                member: "스벨링크 회원",
+                amount: "월 2만원",
+                benefit: "정기연주회 A석 2매",
+                gradient: "from-[#FCEFCB] to-[#FAD59A]",
+                textColor: "text-[#A86523]",
+                amountColor: "text-[#A86523]",
+                additionalBenefits: [
+                  "프로그램북 2부 제공",
+                  "프로그램북 회원명단 게재",
+                  "티켓구매시 30% 할인",
+                ],
+              },
+              {
+                member: "바 흐 회원",
+                amount: "월 3만원",
+                benefit: "정기연주회 S석 2매",
+                gradient: "from-[#FCEFCB] to-[#FAD59A]",
+                textColor: "text-[#A86523]",
+                amountColor: "text-[#A86523]",
+                additionalBenefits: [
+                  "프로그램북 2부 제공",
+                  "프로그램북 회원명단 게재",
+                  "티켓구매시 30% 할인",
+                ],
+              },
+              {
+                member: "모차르트 회원",
+                amount: "월 5만원",
+                benefit: "정기연주회 S석 4매",
+                gradient: "from-[#FCEFCB] to-[#FAD59A]",
+                textColor: "text-[#A86523]",
+                amountColor: "text-[#A86523]",
+                additionalBenefits: [
+                  "프로그램북 2부 제공",
+                  "프로그램북 회원명단 게재",
+                  "티켓구매시 30% 할인",
+                ],
+              },
+              {
+                member: "브 람 스 회원",
+                amount: "월 10만원 이상",
+                benefit: "정기연주회 R석 4매",
+                gradient: "from-[#FCEFCB] to-[#FAD59A]",
+                textColor: "text-[#A86523]",
+                amountColor: "text-[#A86523]",
+                additionalBenefits: [
+                  "프로그램북 2부 제공",
+                  "프로그램북 회원명단 게재",
+                  "티켓구매시 30% 할인",
+                ],
+              },
+            ].map((row, index) => (
+              <div
+                key={index}
+                className={`bg-gradient-to-br ${row.gradient} rounded-lg shadow-md hover:shadow-lg transition-all duration-300 p-6 flex flex-col h-full border border-[#E9A319]/20`}
+              >
+                <div className={`font-bold text-xl ${row.textColor} mb-3`}>
+                  {row.member}
                 </div>
-              ))}
-              <div className="bg-white rounded-lg shadow-sm p-4">
-                <div className="font-medium text-gray-900 mb-2">광고 후원</div>
-                <div className="text-gray-600 text-sm">
-                  프로그램북에 광고를 게재하여 후원하실 분
+                <div className={`${row.amountColor} font-semibold mb-2`}>
+                  {row.amount}
+                </div>
+                <div className={`${row.textColor} mb-4`}>{row.benefit}</div>
+                <div className="mt-auto pt-4 border-t border-[#A86523]/20">
+                  <ul
+                    className={`list-disc pl-5 text-sm ${row.textColor} space-y-1`}
+                  >
+                    {row.additionalBenefits.map((benefit, idx) => (
+                      <li key={idx}>{benefit}</li>
+                    ))}
+                  </ul>
                 </div>
               </div>
+            ))}
+          </div>
+          <div className="mt-4 bg-white rounded-lg shadow-md p-6">
+            <div className="font-bold text-xl text-gray-900 mb-2">
+              광고 후원
             </div>
-
-            {/* 데스크톱 뷰 */}
-            <table className="w-full text-sm text-left text-gray-500 hidden lg:table">
-              <tbody>
-                {[
-                  {
-                    member: "스벨링크 회원",
-                    amount: "월 2만원",
-                    benefit: "정기연주회 A석 2매",
-                  },
-                  {
-                    member: "바 흐 회원",
-                    amount: "월 3만원",
-                    benefit: "정기연주회 S석 2매",
-                  },
-                  {
-                    member: "모차르트 회원",
-                    amount: "월 5만원",
-                    benefit: "정기연주회 S석 4매",
-                  },
-                  {
-                    member: "브 람 스 회원",
-                    amount: "월 10만원 이상",
-                    benefit: "정기연주회 R석 4매",
-                  },
-                ].map((row, index) => (
-                  <tr key={index} className="bg-white border-b">
-                    <td className="px-6 py-4">{row.member}</td>
-                    <td className="px-6 py-4">{row.amount}</td>
-                    <td className="px-6 py-4">{row.benefit}</td>
-                    {index === 0 && (
-                      <td rowSpan={4} className="px-6 py-4">
-                        <ul className="list-disc pl-5">
-                          <li>프로그램북 2부 제공</li>
-                          <li>프로그램북 회원명단 게재</li>
-                          <li>티켓구매시 30% 할인</li>
-                        </ul>
-                      </td>
-                    )}
-                  </tr>
-                ))}
-                <tr className="bg-white border-b">
-                  <td className="px-6 py-4">광 고 후원</td>
-                  <td colSpan={3} className="px-6 py-4">
-                    프로그램북에 광고를 게재하여 후원하실 분
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+            <div className="text-gray-600">
+              프로그램북에 광고를 게재하여 후원하실 분
+            </div>
           </div>
 
           <h3 className="text-2xl font-semibold my-6">후원자 세제혜택</h3>
@@ -206,7 +190,7 @@ export default function page() {
           </ul>
 
           <button
-            className="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-6"
+            className="w-full bg-gradient-to-r from-[#FCEFCB] to-[#FAD59A] hover:from-[#FAD59A] hover:to-[#E9A319] text-[#A86523] font-bold py-2 px-4 rounded mt-6 transition-all duration-300 shadow-md hover:shadow-lg"
             onClick={() => window.open("후원신청서.hwp")}
           >
             후원하기
@@ -220,12 +204,10 @@ export default function page() {
             제39조제5항에 따라 연간 기부금 모금액 활용실적 명세서를 공개합니다.
           </p>
           <ul className="space-y-2">
-            {[2023, 2022, 2021, 2020, 2019, 2018].map((year) => (
+            {[2024, 2023, 2022, 2021, 2020, 2019, 2018].map((year) => (
               <li key={year}>
                 <a
-                  href={`./연간기부금모금액및활용실적명세서${
-                    year === 2023 ? "2023" : `(${year}년도)`
-                  }.pdf`}
+                  href={`./연간기부금모금액및활용실적명세서(${year}년도).pdf`}
                   className="text-blue-600 hover:underline"
                 >
                   {year}년 연간 기부금 모금액 및 활용실적 명세서
