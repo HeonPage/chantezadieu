@@ -28,7 +28,7 @@ export default function Page() {
             <div className="absolute inset-0 bg-black opacity-60"></div>
             <div className="absolute inset-0 flex flex-col gap-6 items-center justify-center">
               <h1 className="flex flex-col text-center text-white mobile-size:text-4xl tablet-size:text-5xl desktop-size:text-7xl tracking-wide gap-2">
-                <span>Chœur Chantez à Dieu12312321321</span>
+                <span>Chœur Chantez à Dieu</span>
               </h1>
             </div>
           </div>
