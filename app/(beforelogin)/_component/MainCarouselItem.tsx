@@ -49,7 +49,7 @@ export default function MainCarousel({
         </Link>
       </h1>
       <Carousel
-        plugins={[plugin.current]}
+        // plugins={[plugin.current]}
         className="w-full"
         onMouseEnter={plugin.current.stop}
         onMouseLeave={plugin.current.reset}
