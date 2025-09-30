@@ -10,8 +10,8 @@ export default function page() {
         description="Chantez a dieu"
         link_url="/sponser"
       />
-      <div className="text-sm">
-        <div className="bg-white border rounded-lg p-6 mb-8">
+      <div className="text-sm flex flex-col gap-6">
+        <div className="bg-white border rounded-lg p-6">
           <p className="text-slate-700 leading-relaxed mb-4">
             하나님의 신실하심과 아름다우심을 온 세상에 전하는 사역에 지금
             동참하실 수 있습니다.
@@ -88,9 +88,9 @@ export default function page() {
                 member: "스벨링크 회원",
                 amount: "월 2만원",
                 benefit: "정기연주회 A석 2매",
-                gradient: "from-[#FCEFCB] to-[#FAD59A]",
-                textColor: "text-[#A86523]",
-                amountColor: "text-[#A86523]",
+                gradient: "from-[#f4f4f4] to-[#ffffff]",
+                textColor: "text-[#000000]",
+                amountColor: "text-[#000000]",
                 additionalBenefits: [
                   "프로그램북 2부 제공",
                   "프로그램북 회원명단 게재",
@@ -101,9 +101,9 @@ export default function page() {
                 member: "바 흐 회원",
                 amount: "월 3만원",
                 benefit: "정기연주회 S석 2매",
-                gradient: "from-[#FCEFCB] to-[#FAD59A]",
-                textColor: "text-[#A86523]",
-                amountColor: "text-[#A86523]",
+                gradient: "from-[#f4f4f4] to-[#ffffff]",
+                textColor: "text-[#000000]",
+                amountColor: "text-[#000000]",
                 additionalBenefits: [
                   "프로그램북 2부 제공",
                   "프로그램북 회원명단 게재",
@@ -114,9 +114,9 @@ export default function page() {
                 member: "모차르트 회원",
                 amount: "월 5만원",
                 benefit: "정기연주회 S석 4매",
-                gradient: "from-[#FCEFCB] to-[#FAD59A]",
-                textColor: "text-[#A86523]",
-                amountColor: "text-[#A86523]",
+                gradient: "from-[#f4f4f4] to-[#ffffff]",
+                textColor: "text-[#000000]",
+                amountColor: "text-[#000000]",
                 additionalBenefits: [
                   "프로그램북 2부 제공",
                   "프로그램북 회원명단 게재",
@@ -127,9 +127,9 @@ export default function page() {
                 member: "브 람 스 회원",
                 amount: "월 10만원 이상",
                 benefit: "정기연주회 R석 4매",
-                gradient: "from-[#FCEFCB] to-[#FAD59A]",
-                textColor: "text-[#A86523]",
-                amountColor: "text-[#A86523]",
+                gradient: "from-[#f4f4f4] to-[#ffffff]",
+                textColor: "text-[#000000]",
+                amountColor: "text-[#000000]",
                 additionalBenefits: [
                   "프로그램북 2부 제공",
                   "프로그램북 회원명단 게재",
@@ -139,7 +139,7 @@ export default function page() {
             ].map((row, index) => (
               <div
                 key={index}
-                className={`bg-gradient-to-br ${row.gradient} rounded-lg shadow-md hover:shadow-lg transition-all duration-300 p-6 flex flex-col h-full border border-[#E9A319]/20`}
+                className={`bg-gradient-to-br ${row.gradient} rounded-lg shadow-md hover:shadow-lg transition-all duration-300 p-6 flex flex-col h-full border border-[#f4f4f4]/20`}
               >
                 <div className={`font-bold text-xl ${row.textColor} mb-3`}>
                   {row.member}
@@ -148,7 +148,7 @@ export default function page() {
                   {row.amount}
                 </div>
                 <div className={`${row.textColor} mb-4`}>{row.benefit}</div>
-                <div className="mt-auto pt-4 border-t border-[#A86523]/20">
+                <div className="mt-auto pt-4 border-t border-[#f4f4f4]/20">
                   <ul
                     className={`list-disc pl-5 text-sm ${row.textColor} space-y-1`}
                   >
@@ -190,14 +190,14 @@ export default function page() {
           </ul>
 
           <button
-            className="w-full bg-gradient-to-r from-[#FCEFCB] to-[#FAD59A] hover:from-[#FAD59A] hover:to-[#E9A319] text-[#A86523] font-bold py-2 px-4 rounded mt-6 transition-all duration-300 shadow-md hover:shadow-lg"
+            className="w-full bg-gradient-to-r from-[#f4f4f4] to-[#ffffff] hover:from-[#FAD59A] hover:to-[#E9A319] text-[#000000] font-bold py-2 px-4 rounded mt-6 transition-all duration-300 shadow-md hover:shadow-lg"
             onClick={() => window.open("후원신청서.hwp")}
           >
             후원하기
           </button>
         </div>
 
-        <div className="bg-white shadow-md rounded-lg p-6">
+        <div className="bg-white shadow-md rounded-lg p-6 border">
           <h3 className="text-2xl font-semibold mb-4">후원금 사용내역</h3>
           <p className=" leading-relaxed mb-4">
             사단법인 샹떼자듀합창단은 「법인세법 시행령」 제38조제8항 또는
@@ -221,6 +221,33 @@ export default function page() {
                 </option>
               ))}
             </select>
+          </div>
+        </div>
+
+        <div className="bg-white shadow-md rounded-lg p-6 border">
+          <h3 className="text-2xl font-semibold mb-4">공익제보</h3>
+          <p className=" leading-relaxed mb-8">
+            사단법인 샹떼자듀합창단은 '공익법인의 설립ㆍ운영에 관한 법률'에 따른
+            공익법인으로서, 관련 법령과 규정을 준수합니다. 이사들은 합창단의
+            공정하고 투명한 운영을 위해 노력하고 있습니다. 우리 합창단과 관련된
+            탈세, 비위 사실 등을 알고 계시면 아래 기관들에 제보할 수 있습니다.
+          </p>
+          <div className="justify-between flex flex-row gap-6">
+            <a
+              href="https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?mi=135744&cntntsId=109155"
+              target="_blank"
+            >
+              <img src="/tax.png" alt="국세청" className="h-12" />
+            </a>
+            <a
+              href="https://www.moe.go.kr/sub/infoRenewal.do?m=010302&page=010302&gubun=N&s=moe"
+              target="_blank"
+            >
+              <img src="/education.png" alt="교육부" className="h-12" />
+            </a>
+            <a href="https://www.acrc.go.kr/" target="_blank">
+              <img src="/right.png" alt="국민권익위원회" className="h-12" />
+            </a>
           </div>
         </div>
       </div>
