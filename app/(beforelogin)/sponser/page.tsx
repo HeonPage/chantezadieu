@@ -215,7 +215,7 @@ export default function page() {
               <option value="" disabled>
                 연도를 선택하세요
               </option>
-              {[2024, 2023, 2022, 2021, 2020, 2019, 2018].map((year) => (
+              {[2025, 2024, 2023, 2022, 2021, 2020, 2019, 2018].map((year) => (
                 <option key={year} value={year}>
                   {year}년 연간 기부금 모금액 및 활용실적 명세서
                 </option>
