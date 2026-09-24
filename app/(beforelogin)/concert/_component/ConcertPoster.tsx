@@ -1,55 +1,46 @@
 import React from "react";
 import Image from "next/image";
+import { Expand } from "lucide-react";
 import {
   Dialog,
   DialogContent,
-  DialogDescription,
-  DialogHeader,
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { IConcert } from "@/types/IConcert";
+
 const ConcertPoster = ({ concert }: { concert: IConcert }) => {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <div className="after:content group relative mb-5 block w-full cursor-zoom-in after:pointer-events-none after:absolute after:inset-0 after:rounded-lg after:shadow-highlight">
+        <button className="group relative block w-full cursor-zoom-in overflow-hidden rounded-sm shadow-[0_30px_60px_-20px_rgba(0,0,0,0.6)] ring-1 ring-white/10">
           <Image
-            alt={"Concert Poster"}
-            className="transform rounded-lg brightness-90 transition will-change-auto group-hover:brightness-110"
-            style={{ transform: "translate3d(0, 0, 0)" }}
+            alt={`${concert.title} 포스터`}
             src={concert.img_url}
             width={720}
-            height={480}
-            sizes="(max-width: 640px) 100vw,
-                  (max-width: 1280px) 50vw,
-                  (max-width: 1536px) 33vw,
-                  25vw"
+            height={1008}
+            priority
+            sizes="(max-width: 768px) 280px, 33vw"
+            className="h-auto w-full transition-transform duration-700 group-hover:scale-[1.03]"
           />
-        </div>
+          <span className="absolute bottom-3 right-3 inline-flex h-9 w-9 items-center justify-center rounded-full bg-black/50 text-white opacity-0 backdrop-blur transition-opacity group-hover:opacity-100">
+            <Expand className="h-4 w-4" />
+          </span>
+        </button>
       </DialogTrigger>
       <DialogContent
         aria-describedby={undefined}
-        className="sm:max-w-[1000px] w-full p-6"
+        className="max-h-[92vh] w-[92vw] max-w-3xl overflow-y-auto border-0 bg-transparent p-0 shadow-none"
       >
-        <DialogHeader>
-          <DialogTitle>
-            <span className="text-2xl font-bold">{concert.title}</span>
-          </DialogTitle>
-          <DialogDescription>
-            <span className="text-md">
-              {concert.date}, {concert.place}
-            </span>
-          </DialogDescription>
-        </DialogHeader>
-        <div className="relative w-full">
-          <Image
-            alt={"concert Poster"}
-            src={concert.img_url}
-            width={500}
-            height={500}
-          />
-        </div>
+        <DialogTitle className="sr-only">{concert.title}</DialogTitle>
+        <Image
+          alt={`${concert.title} 포스터`}
+          src={concert.img_url}
+          width={1200}
+          height={1680}
+          sizes="92vw"
+          className="h-auto w-full rounded-sm"
+        />
       </DialogContent>
     </Dialog>
   );

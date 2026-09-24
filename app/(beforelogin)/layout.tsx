@@ -16,12 +16,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <main className="min-h-screen flex flex-col items-center">
+    <div className="flex min-h-screen flex-col">
       <Header />
-      <div className="flex-1 mobile-size:w-full tablet-size:w-full flex flex-col">
-        {children}
-      </div>
+      <main className="flex w-full flex-1 flex-col">{children}</main>
       <Footer />
-    </main>
+    </div>
   );
 }

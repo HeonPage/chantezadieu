@@ -417,13 +417,16 @@ export const concertList: IConcert[] = [
   },
 ];
 
-export async function getConcert(id: string): Promise<IConcert> {
-  const res = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/api/concerts/${id}`,
-    { cache: "no-store" }
-  );
-  if (!res.ok) {
-    throw new Error("Failed to fetch concert data");
-  }
-  return res.json();
+/** 연주회 id(YYYYMM, YYYYMMn) 기준 최신순 정렬 */
+export const concertSortKey = (concert: IConcert) =>
+  Number(String(concert.id ?? "").slice(0, 6)) || 0;
+
+export const concertYear = (concert: IConcert) =>
+  String(concert.id ?? "").slice(0, 4);
+
+export const sortedConcerts = (): IConcert[] =>
+  [...concertList].sort((a, b) => concertSortKey(b) - concertSortKey(a));
+
+export async function getConcert(id: string): Promise<IConcert | undefined> {
+  return concertList.find((c) => String(c.id) === String(id));
 }
