@@ -4,6 +4,10 @@
 
 @layer base {
   :root {
+    --font-sans: "Noto Sans KR";
+    --font-serif: "Noto Serif KR";
+    --font-display: "Cormorant Garamond";
+
     /* Chantez à Dieu — CI 컬러(네이비 · 버건디 · 골드) 기반 */
     --background: 43 38% 97%;
     --foreground: 222 32% 11%;
