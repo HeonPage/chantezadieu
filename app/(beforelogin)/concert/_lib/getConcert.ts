@@ -2,6 +2,62 @@ import { IConcert } from "@/types/IConcert";
 
 export const concertList: IConcert[] = [
   {
+    id: 202604,
+    title: "수난절 음악회 F. Poulenc & J. S. Bach 칸타타 BWV 170, 106, 4",
+    date: "2026년 4월 2일 목요일 오후7시30분",
+    place: "영산아트홀",
+    img_url: "/202604/01.jpg",
+    performers: {
+      conductor: "김혜옥",
+      soloists: {
+        소프라노: "최혜경",
+        카운터테너: "장정권",
+        테너: "오의영",
+        베이스: "신입음",
+      },
+      choir: "샹떼자듀 합창단",
+      orchestra: "바흐솔리스텐서울",
+    },
+    program: {
+      part1: [
+        "Quatre motets pour un temps de pénitence – F. Poulenc",
+        "Cantata BWV 170 「Vergnügte Ruh, beliebte Seelenlust」 – J. S. Bach",
+      ],
+      part2: [
+        "Cantata BWV 106 「Actus Tragicus」 – J. S. Bach",
+        "Cantata BWV 4 「Christ lag in Todesbanden」 – J. S. Bach",
+      ],
+    },
+    organizer: "사단법인 샹떼자듀합창단",
+    sponsor: ["샹떼자듀 정기후원회", "라센느아트홀"],
+    ticketing: ["NOL티켓"],
+  },
+  {
+    id: 202506,
+    title: "F. J. Haydn의 넬슨 미사 & A. Bruckner의 테 데움",
+    date: "2025년 6월 19일 목요일 오후7시30분",
+    place: "연세대학교 백주년기념관 콘서트홀",
+    img_url: "/202506/01.jpg",
+    performers: {
+      conductor: "김혜옥 / Kent Hatteberg",
+      soloists: {
+        소프라노: "박지홍",
+        카운터테너: "장정권",
+        테너: "김효종",
+        베이스: "우경식",
+      },
+      choir: ["샹떼자듀 합창단", "루이빌 대학교 카디널 싱어즈"],
+      orchestra: "샹떼자듀 챔버 오케스트라",
+    },
+    program: {
+      part1: ["F. J. Haydn – Nelson Mass Hob. XXII/11"],
+      part2: ["A. Bruckner – Te Deum WAB 45"],
+    },
+    organizer: "사단법인 샹떼자듀합창단",
+    sponsor: ["샹떼자듀 정기후원회", "라센느아트홀"],
+    ticketing: ["티켓링크", "인터파크티켓"],
+  },
+  {
     id: 202411,
     title: "W. A. Mozrt의 레퀴엠 KV626",
     date: "2024년 11월 14일 목요일 오후7시30분",
